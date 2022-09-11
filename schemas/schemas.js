@@ -11,5 +11,11 @@ const signInSchema=joi.object({
     password: joi.string().required()
 });
 
+const transactionSchema=joi.object({
+    operation:joi.required(),
+    value:joi.required(),
+    description:joi.string().required()
 
-export {signUpSchema,signInSchema} 
+
+})
+export {signUpSchema,signInSchema,transactionSchema} 

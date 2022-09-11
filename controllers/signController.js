@@ -52,7 +52,7 @@ const signIn=async(req,res)=>{
       const token = uuid();
       db.collection('sessions').insertOne({token,userId: user._id})
 
-    return res.status(200).send(token)
+    return res.status(200).send({token:token,name:user.name})
 
 
     }else{
